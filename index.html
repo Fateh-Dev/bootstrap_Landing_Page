@@ -10,6 +10,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -20,20 +21,31 @@
   </head>
   <body>
     <!-- Image and text -->
+
     <nav
-      class="navbar navbar-expand-lg navbar-light navbar-nav navbar-dark"
+      class="
+        navbar navbar-expand-lg navbar-light navbar-nav navbar-dark
+        sticky-top
+      "
       style="background-color: #1e4151; padding: 8px 16px"
     >
-      <div class="container-fluid" style="height: 53px">
-        <a class="navbar-brand" href="#">
+      <div class="container-fluid">
+        <a
+          class="navbar-brand"
+          href="#"
+          data-aos="fade-right"
+          data-aos-duration="500"
+        >
           <img
             src="./Dogecoin_Logo.png"
             width="42"
             height="42"
             class="d-inline-block align-top"
             alt=""
+            draggable="false"
+            ondragstart="return false;"
           />
-          Dogecoin
+          <!-- <span>Control TM</span> -->
         </a>
         <button
           class="navbar-toggler"
@@ -46,19 +58,38 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarText">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <div
+          class="collapse navbar-collapse"
+          id="navbarText"
+          style="justify-content: center"
+        >
+          <ul
+            class="navbar-nav me-auto mb-2 mb-lg-0"
+            data-aos="fade-left"
+            data-aos-duration="500"
+          >
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Features</a>
+              <a class="nav-link" href="#">About us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
+              <a class="nav-link" href="#">Our services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Careers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact us</a>
             </li>
           </ul>
-          <span class="navbar-text"> Navbar text with an inline element </span>
         </div>
       </div>
     </nav>
@@ -69,16 +100,48 @@
       <span style="flex: 1 1 auto"> ddd</span>
       <span>hello</span>
     </div> -->
+
     <header
       class="masthead bg-primary text-white text-center"
       style="position: relative"
     >
-      <span style="position: fixed; top: 250px; left: 0px; z-index: 10">
-        <a href="#" class="fa fa-facebook"></a>
-        <a href="#" class="fa fa-twitter"></a>
-        <a href="#" class="fa fa-google"></a>
-        <a href="#" class="fa fa-linkedin"></a>
-      </span>
+      <div
+        style="
+          position: fixed;
+          top: 200px;
+          left: 0px;
+          z-index: 10;
+          padding: 5px;
+        "
+      >
+        <span
+          href="#"
+          data-aos="fade-right"
+          data-aos-delay="100"
+          class="fa fa-facebook"
+        ></span>
+        <br />
+        <span
+          href="#"
+          class="fa fa-twitter"
+          data-aos="fade-right"
+          data-aos-delay="200"
+        ></span>
+        <br />
+        <span
+          href="#"
+          class="fa fa-google"
+          data-aos="fade-right"
+          data-aos-delay="300"
+        ></span>
+        <br />
+        <span
+          href="#"
+          class="fa fa-linkedin"
+          data-aos="fade-right"
+          data-aos-delay="400"
+        ></span>
+      </div>
       <div
         id="particles-js"
         style="position: absolute; top: 0; bottom: 0; left: 0; right: 0"
@@ -91,16 +154,18 @@
       />  -->
       </div>
       <div class="d-flex align-items-center flex-column">
-        <div class="row" style="min-height: 70vh; padding: 50px">
+        <div class="row" style="min-height: 100vh; padding: 50px">
           <div class="col-md-12 text-center">
-            <h2 class="text-secondary">My Technology</h2>
+            <h2 class="text-secondary">Control TM</h2>
           </div>
           <div class="col-md-12">
             <img
-              class="masthead-avatar mb-1"
+              class="masthead-avatar mb-1 selectDisable"
               style="margin-top: -3rem"
               width="250"
               src="./doge.png"
+              draggable="false"
+              ondragstart="return false;"
               alt=""
             />
             <!-- Masthead Subheading-->
@@ -112,17 +177,12 @@
               préférée de tous les Shibas Inus du monde entier.
             </p>
             <div class="btn-holder mt-4">
-              <a
-                class="btn btn-secondary btn-lg js-scroll-trigger"
-                href="#start"
+              <a class="btn btn-secondary btn-lg js-scroll-trigger"
                 ><span data-i18n="dgc-get-started-now"
                   >Commencez dès maintenant</span
                 ></a
               >&nbsp;
-              <a
-                class="btn btn-outline-secondary btn-lg"
-                href="https://github.com/dogecoin/dogecoin"
-                target="_blank"
+              <a class="btn btn-outline-secondary btn-lg" target="_blank"
                 ><span class="fab fa-github"></span>
                 <span data-i18n="dgc-wallet-source">Source</span></a
               >
@@ -131,56 +191,135 @@
         </div>
       </div>
     </header>
-
-    <section class="container-fluid">
+    <div class="container-fluid">
       <div
         class="row"
         style="
-          min-height: 250px;
+          height: 350px;
           background-color: #f2f2f2;
           padding: 20px;
           justify-content: center;
         "
       >
-        <div class="card col-2" style="border-radius: 20px">
-          <img src="./Dogecoin_Logo.png" class="card-img-top" alt="..." />
-          <div class="card-body">
+        <div
+          class="card col-2"
+          style="
+            border-radius: 20px;
+            z-index: 12;
+            position: relative;
+            top: -150px;
+            padding: 2px;
+          "
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <img
+            src="./img.png"
+            class="card-img-top"
+            alt="..."
+            style="border-radius: 20px"
+          />
+          <div class="card-body" style="padding: 20px">
             <p class="card-text">
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
             </p>
           </div>
         </div>
-        <div class="card col-2" style="border-radius: 20px">
-          <img src="./Dogecoin_Logo.png" class="card-img-top" alt="..." />
-          <div class="card-body" style="padding: 20px 0px">
+        <div
+          class="card col-2"
+          style="
+            border-radius: 20px;
+            z-index: 12;
+            position: relative;
+            top: -150px;
+            padding: 2px;
+          "
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <img
+            src="./img.png"
+            class="card-img-top"
+            alt="..."
+            style="border-radius: 20px"
+          />
+          <div class="card-body" style="padding: 20px">
             <p class="card-text">
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
             </p>
           </div>
         </div>
-        <div class="card col-2" style="border-radius: 20px">
-          <img src="./Dogecoin_Logo.png" class="card-img-top" alt="..." />
-          <div class="card-body" style="padding: 20px 0px">
+        <div
+          class="card col-2"
+          style="
+            border-radius: 20px;
+            z-index: 12;
+            position: relative;
+            top: -150px;
+            padding: 2px;
+          "
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
+          <img
+            src="./img.png"
+            class="card-img-top"
+            alt="..."
+            style="border-radius: 20px"
+          />
+          <div class="card-body" style="padding: 20px">
             <p class="card-text">
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
             </p>
           </div>
         </div>
-        <div class="card col-2" style="border-radius: 20px">
-          <img src="./Dogecoin_Logo.png" class="card-img-top" alt="..." />
-          <div class="card-body" style="padding: 20px 0px">
+        <div
+          class="card col-2"
+          style="
+            border-radius: 20px;
+            z-index: 12;
+            position: relative;
+            top: -150px;
+            padding: 2px;
+          "
+          data-aos="fade-up"
+          data-aos-delay="400"
+        >
+          <img
+            src="./img.png"
+            class="card-img-top"
+            alt="..."
+            style="border-radius: 20px"
+          />
+          <div class="card-body" style="padding: 20px">
             <p class="card-text">
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
             </p>
           </div>
         </div>
-        <div class="card col-2" style="border-radius: 20px">
-          <img src="./Dogecoin_Logo.png" class="card-img-top" alt="..." />
-          <div class="card-body" style="padding: 20px 0px">
+        <div
+          class="card col-2"
+          style="
+            border-radius: 20px;
+            z-index: 12;
+            position: relative;
+            top: -150px;
+            padding: 2px;
+          "
+          data-aos="fade-up"
+          data-aos-delay="500"
+        >
+          <img
+            src="./img.png"
+            class="card-img-top"
+            alt="..."
+            style="border-radius: 20px"
+          />
+          <div class="card-body" style="padding: 20px">
             <p class="card-text">
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
@@ -188,8 +327,8 @@
           </div>
         </div>
       </div>
-    </section>
-    <section class="container-fluid">
+    </div>
+    <div class="container-fluid">
       <div
         class="row"
         style="
@@ -199,17 +338,50 @@
           justify-content: center;
         "
       >
-        <div class="card col-8" style="border-radius: 20px">
+        <div
+          class="card col-8"
+          style="border-radius: 20px"
+          data-aos="fade-left"
+          data-aos-duration="1000"
+        >
           <div class="card-body">
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
+            <img
+              src="./img.png"
+              class="card-img-top"
+              alt="..."
+              style="
+                position: relative;
+                border-radius: 20px;
+                max-width: 300px;
+                min-height: 500px;
+              "
+            />
           </div>
         </div>
       </div>
-    </section>
+    </div>
+    <footer class="container-fluid">
+      <div
+        class="row"
+        style="
+          min-height: 250px;
+          background-color: #1e4151;
+          padding: 20px;
+          justify-content: center;
+        "
+      ></div>
+    </footer>
 
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="./node_modules/smooth-scrollbar/dist/smooth-scrollbar.js"></script>
+    <script>
+      var Scrollbar = window.Scrollbar;
+      Scrollbar.init(document.querySelector("#my-scrollbar"));
+    </script>
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"

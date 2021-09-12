@@ -1,12 +1,21 @@
 .fa {
   padding: 20px;
-  /* font-size: 30px; */
+  font-size: 30px;
   width: 55px;
   height: 55px;
   text-align: center;
   text-decoration: none;
   margin: 5px 2px;
+  cursor: pointer;
   border-radius: 50%;
+}
+.fa-one {
+  padding: 0px;
+  /* font-size: 30px; */
+  text-align: center;
+  text-decoration: none;
+  margin: 0;
+  border-radius: 0;
 }
 
 .fa:hover {

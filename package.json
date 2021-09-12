@@ -11,5 +11,9 @@
   "license": "ISC",
   "devDependencies": {
     "lite-server": "^2.6.1"
+  },
+  "dependencies": {
+    "aos": "^2.3.4",
+    "smooth-scrollbar": "^8.6.3"
   }
 }
