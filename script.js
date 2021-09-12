@@ -6,7 +6,11 @@ particlesJS("particles-js", {
       type: "image",
       stroke: { width: 0, color: "#98a1a1" },
       polygon: { nb_sides: 5 },
-      image: { src: "./dogecoin_logo.png", width: 300, height: 300 },
+      image: {
+        src: "./assets/images/dogecoin_logo.png",
+        width: 300,
+        height: 300,
+      },
     },
     opacity: {
       value: 0.5,

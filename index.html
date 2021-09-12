@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="style.css" rel="stylesheet" />
-    <link href="icons.css" rel="stylesheet" />
+    <link href="assets/styles/style.css" rel="stylesheet" />
+    <link href="assets/styles/icons.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -37,7 +37,7 @@
           data-aos-duration="500"
         >
           <img
-            src="./Dogecoin_Logo.png"
+            src="./assets/images/Dogecoin_Logo.png"
             width="42"
             height="42"
             class="d-inline-block align-top"
@@ -163,7 +163,7 @@
               class="masthead-avatar mb-1 selectDisable"
               style="margin-top: -3rem"
               width="250"
-              src="./doge.png"
+              src="./assets/images/doge.png"
               draggable="false"
               ondragstart="return false;"
               alt=""
@@ -214,7 +214,7 @@
           data-aos-delay="100"
         >
           <img
-            src="./img.png"
+            src="./assets/images/img.png"
             class="card-img-top"
             alt="..."
             style="border-radius: 20px"
@@ -239,7 +239,7 @@
           data-aos-delay="200"
         >
           <img
-            src="./img.png"
+            src="./assets/images/img.png"
             class="card-img-top"
             alt="..."
             style="border-radius: 20px"
@@ -264,7 +264,7 @@
           data-aos-delay="300"
         >
           <img
-            src="./img.png"
+            src="./assets/images/img.png"
             class="card-img-top"
             alt="..."
             style="border-radius: 20px"
@@ -289,7 +289,7 @@
           data-aos-delay="400"
         >
           <img
-            src="./img.png"
+            src="./assets/images/img.png"
             class="card-img-top"
             alt="..."
             style="border-radius: 20px"
@@ -314,7 +314,7 @@
           data-aos-delay="500"
         >
           <img
-            src="./img.png"
+            src="./assets/images/img.png"
             class="card-img-top"
             alt="..."
             style="border-radius: 20px"
@@ -346,7 +346,7 @@
         >
           <div class="card-body">
             <img
-              src="./img.png"
+              src="./assets/images/img.png"
               class="card-img-top"
               alt="..."
               style="
@@ -360,6 +360,7 @@
         </div>
       </div>
     </div>
+
     <footer class="container-fluid">
       <div
         class="row"
@@ -371,8 +372,23 @@
         "
       ></div>
     </footer>
-
-    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <a
+      class="btn btn-secondary btn-lg js-scroll-trigger fa fa-arrow-up"
+      onclick=" window.scrollTo({top: 0, behavior: 'smooth'})"
+      id="myBtn"
+      data-aos="fade-left"
+      style="
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        position: fixed;
+        right: 10px;
+        bottom: 10px;
+        z-index: 400px;
+        box-shadow: 1px 1px 8px gray;
+      "
+    >
+    </a>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
